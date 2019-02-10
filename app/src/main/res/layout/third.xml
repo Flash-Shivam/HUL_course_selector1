@@ -10,9 +10,48 @@
         android:id="@+id/ter1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Course Name"
+        android:text="FeedBack"
         android:textColor="@color/colorPrimary"
         android:textSize="20dp"
         />
+
+    <EditText
+        android:id="@+id/yar"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ter1"
+        android:layout_marginTop="20dp"
+        android:hint="Course Name"
+        />
+
+    <EditText
+        android:id="@+id/yar2"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yar"
+        android:layout_marginTop="20dp"
+        android:hint="Professor"
+        />
+
+    <EditText
+        android:id="@+id/yar3"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yar2"
+        android:layout_marginTop="20dp"
+        android:hint="Grading Type"
+        />
+
+    <EditText
+        android:id="@+id/yar4"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yar3"
+        android:layout_marginTop="20dp"
+        android:hint="Work Load"
+        />
+
+
+
 
 </RelativeLayout>
