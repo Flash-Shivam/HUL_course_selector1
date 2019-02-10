@@ -51,6 +51,15 @@
         android:hint="Work Load"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Register"
+        android:onClick="Cha"
+        android:text="Submit"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/yar4"
+        />
 
 
 

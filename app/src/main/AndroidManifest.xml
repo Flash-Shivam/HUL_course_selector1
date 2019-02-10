@@ -27,6 +27,10 @@
             android:label="Feedback"
             android:theme="@style/AppTheme"/>
 
+        <activity android:name=".Fourth"
+            android:label="Feedback"
+            android:theme="@style/AppTheme"/>
+
     </application>
 
 </manifest>
