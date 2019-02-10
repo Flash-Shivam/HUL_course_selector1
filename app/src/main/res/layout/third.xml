@@ -55,12 +55,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Register"
-        android:onClick="Cha"
         android:text="Submit"
         android:layout_marginTop="20dp"
         android:layout_below="@id/yar4"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/View"
+        android:text="View"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/Register"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/View2"
+        android:text="View2"
+        android:onClick="Cha"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/View"
+        />
 
 
 </RelativeLayout>
