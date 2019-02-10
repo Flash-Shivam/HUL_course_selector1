@@ -110,7 +110,8 @@
         android:layout_below="@id/Radio_group"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="25dp"
-        android:text="Feedback" />
+        android:text="Feedback"
+        android:onClick="feedit"/>
 
 
 </RelativeLayout>

@@ -183,4 +183,18 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(changescreen);
     }
+
+
+    public void feedit(View view) {
+
+        // Toast.makeText(this, "Hi", Toast.LENGTH_SHORT).show();
+
+        Intent chanescreen = new Intent(this,ThirdScreen.class);
+
+        chanescreen.putExtra("callAct","j");
+
+
+
+        startActivity(chanescreen);
+    }
 }
