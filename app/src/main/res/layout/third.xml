@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
+    android:background="@drawable/ye"
     android:padding="20dp">
 
     <TextView
@@ -35,7 +36,7 @@
 
     <AutoCompleteTextView
         android:id="@+id/yar3"
-        android:layout_width="158dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:completionThreshold="1"
         android:layout_below="@id/yar2"
@@ -45,7 +46,7 @@
 
     <AutoCompleteTextView
         android:id="@+id/yar4"
-        android:layout_width="158dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/yar3"
         android:layout_marginTop="20dp"

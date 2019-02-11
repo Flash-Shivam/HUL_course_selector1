@@ -7,6 +7,7 @@
     android:paddingTop="64dp"
     android:paddingBottom="64dp"
     android:paddingLeft="64dp"
+    android:background="@drawable/ye"
     android:paddingRight="64dp"
     tools:context=".MainActivity">
 
