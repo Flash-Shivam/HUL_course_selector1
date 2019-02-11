@@ -166,7 +166,7 @@ public class SecondScreen extends Activity {
 
             TextView xx = findViewById(R.id.ter);
             TextView yy = findViewById(R.id.ter6);
-            yy.setText(a+ "."+b+"."+cc+"."+d+"."+f);
+            //yy.setText(a+ "."+b+"."+cc+"."+d+"."+f);
             xx.setText(a);
 
             if(b.equals("Based on Professor Grading"))
