@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/cn"
         android:id="@+id/gn"
-        android:text="Get Name"
+        android:text="Get Name/Code"
 
         />
 

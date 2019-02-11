@@ -22,7 +22,7 @@ import java.lang.Float;
 public class MainActivity extends AppCompatActivity {
 
     private static final String[] Course = new String[]{
-            "HUL212","HUL213","HUL232","HUL239"
+            "HUL212-Micro","HUL213-Macro","HUL232-Modern_Fiction","HUL239-Indian_Fiction",
     };
 
     RadioGroup rg ;
@@ -46,22 +46,25 @@ public class MainActivity extends AppCompatActivity {
                 AutoCompleteTextView ed = findViewById(R.id.Auto);
                 TextView x = findViewById(R.id.cn);
                 String q= ed.getText().toString();
-                if(q.equals("HUL212"))
+                if(q.equals("HUL212-Micro"))
                 {
                     x.setText("Microeconomics");
                 }
-                else  if(q.equals("HUL213"))
+                else  if(q.equals("HUL213-Macro"))
                 {
                     x.setText("Macroeconomics");
                 }
-                else if(q.equals("HUL232"))
+                else if(q.equals("HUL232-Modern_Fiction"))
                 {
-                    x.setText("Modern Indian Fiction in Translation");
+                    x.setText("Modern Indian fiction in Translation");
                 }
-                else if(q.equals("HUL239"))
+                else if(q.equals("HUL239-Indian_Fiction"))
                 {
-                    x.setText("Indian Fiction in English");
+                    x.setText("Indian fiction in English");
                 }
+
+
+
 
             }
         });
@@ -110,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if((j==f.length()&&k==0)||(j==f.length()-1&&k==1)) {
                     float q = Float.valueOf(f);
-                    if(u.equals("HUL212")){
+                    if(u.equals("HUL212-Micro")){
                             double y = 7.5;
 
                         if (Double.compare(q, y) < 0) {
@@ -119,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(this, "Click on Course Details", Toast.LENGTH_LONG).show();
                         }
                     }
-                    else if(u.equals("HUL213")){
+                    else if(u.equals("HUL213-Macro")){
                         double y = 7.5;
 
                         if (Double.compare(q, y) < 0) {
@@ -128,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(this, "Click on Course Details", Toast.LENGTH_LONG).show();
                         }
                     }
-                    else if(u.equals("HUL232")){
+                    else if(u.equals("HUL232-Modern_Fiction")){
                         double y = 8;
 
                         if (Double.compare(q, y) < 0) {
@@ -137,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(this, "Click on Course Details", Toast.LENGTH_LONG).show();
                         }
                     }
-                    else if(u.equals("HUL239")){
+                    else if(u.equals("HUL239-Indian_Fiction")){
                         double y = 0;
 
                         if (Double.compare(q, y) < 0) {
