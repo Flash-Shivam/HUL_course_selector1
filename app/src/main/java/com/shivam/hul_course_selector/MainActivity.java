@@ -26,7 +26,11 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> Course = new ArrayList<String>();
          //   "HUL212-Micro","HUL213-Macro","HUL232-Modern_Fiction","HUL239-Indian_Fiction",
 
-
+    String we="";
+    String ab;
+    String cd;
+    String pq;
+    String zz;
     RadioGroup rg ;
     RadioButton rb ;
     TextView tv;
@@ -43,6 +47,29 @@ public class MainActivity extends AppCompatActivity {
         Course.add("HUL239-Indian_Fiction");
 
         Button z = findViewById(R.id.gn);
+        Button as = (Button) findViewById(R.id.xd);
+        as.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+          /*  AutoCompleteTextView eq = (AutoCompleteTextView) findViewById(R.id.Auto);
+            ArrayList<String> Courses = new ArrayList<String>();*/
+
+
+
+            public void onClick(View v) {
+
+                AutoCompleteTextView eq = (AutoCompleteTextView) findViewById(R.id.Auto);
+                Course.add(we);
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext() ,android.R.layout.simple_list_item_1 ,Course);
+                eq.setAdapter(adapter);
+                we ="added";
+
+
+            }
+
+
+        });
+
 
         z.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
                 AutoCompleteTextView ed = findViewById(R.id.Auto);
                 TextView x = findViewById(R.id.cn);
                 String q= ed.getText().toString();
-                if(q.equals("HUL212-Micro"))
+
+
+                 if(q.equals("HUL212-Micro"))
                 {
                     x.setText("Microeconomics");
                 }
@@ -67,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
                 {
                     x.setText("Indian fiction in English");
                 }
+                else if(we.equals("added")) {
+                     x.setText(q);
+                 }
 
 
 
@@ -96,74 +128,78 @@ public class MainActivity extends AppCompatActivity {
         AutoCompleteTextView ed = findViewById(R.id.Auto);
         String u= ed.getText().toString();
         EditText Cg = (EditText) findViewById(R.id.editText2);
-        if(!isEmpty(Cg))
+
+        if(we.equals("added"))
         {
+            double qi = Double.valueOf(zz);
+            double ey = Double.valueOf(Cg.getText().toString());
+
+            if (Double.compare(ey, qi) < 0) {
+                Toast.makeText(this, "Not Likely to get this course due CG<" + Double.toString(qi), Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Click on Course Details", Toast.LENGTH_LONG).show();
+            }
 
 
-
+        }
+        else {
+            if (!isEmpty(Cg)) {
 
 
                 String f = Cg.getText().toString();
-                int j = 0,k=0;
-                for(int i=0;i<f.length();i++)
-                {
-                    if(f.charAt(i)>= 48&&f.charAt(i)<=57)
-                    {
+                int j = 0, k = 0;
+                for (int i = 0; i < f.length(); i++) {
+                    if (f.charAt(i) >= 48 && f.charAt(i) <= 57) {
                         j++;
                     }
-                    if((f.charAt(i)==46))
-                    {
+                    if ((f.charAt(i) == 46)) {
                         k++;
                     }
                 }
-                if((j==f.length()&&k==0)||(j==f.length()-1&&k==1)) {
+                if ((j == f.length() && k == 0) || (j == f.length() - 1 && k == 1)) {
                     float q = Float.valueOf(f);
-                    if(u.equals("HUL212-Micro")){
-                            double y = 7.5;
-
-                        if (Double.compare(q, y) < 0) {
-                            Toast.makeText(this, "Not Likely to get this course due CG<"+Double.toString(y), Toast.LENGTH_LONG).show();
-                        } else {
-                            Toast.makeText(this, "Click on Course Details", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                    else if(u.equals("HUL213-Macro")){
+                    if (u.equals("HUL212-Micro")) {
                         double y = 7.5;
 
                         if (Double.compare(q, y) < 0) {
-                            Toast.makeText(this, "Not Likely to get this course due CG<"+Double.toString(y), Toast.LENGTH_LONG).show();
+                            Toast.makeText(this, "Not Likely to get this course due CG<" + Double.toString(y), Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(this, "Click on Course Details", Toast.LENGTH_LONG).show();
                         }
-                    }
-                    else if(u.equals("HUL232-Modern_Fiction")){
+                    } else if (u.equals("HUL213-Macro")) {
+                        double y = 7.5;
+
+                        if (Double.compare(q, y) < 0) {
+                            Toast.makeText(this, "Not Likely to get this course due CG<" + Double.toString(y), Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(this, "Click on Course Details", Toast.LENGTH_LONG).show();
+                        }
+                    } else if (u.equals("HUL232-Modern_Fiction")) {
                         double y = 8;
 
                         if (Double.compare(q, y) < 0) {
-                            Toast.makeText(this, "Not Likely to get this course due CG<"+Double.toString(y), Toast.LENGTH_LONG).show();
+                            Toast.makeText(this, "Not Likely to get this course due CG<" + Double.toString(y), Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(this, "Click on Course Details", Toast.LENGTH_LONG).show();
                         }
-                    }
-                    else if(u.equals("HUL239-Indian_Fiction")){
+                    } else if (u.equals("HUL239-Indian_Fiction")) {
                         double y = 0;
 
                         if (Double.compare(q, y) < 0) {
-                            Toast.makeText(this, "Not Likely to get this course due CG<"+Double.toString(y), Toast.LENGTH_LONG).show();
+                            Toast.makeText(this, "Not Likely to get this course due CG<" + Double.toString(y), Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(this, "Click on Course Details", Toast.LENGTH_LONG).show();
                         }
                     }
 
 
-                }
-                else{
+                } else {
                     Toast.makeText(this, "Enter Valid CG", Toast.LENGTH_LONG).show();
                 }
 
-        }
-        else{
-            Toast.makeText(this, "Enter Valid CG", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Enter Valid CG", Toast.LENGTH_SHORT).show();
+            }
         }
 
     }
@@ -187,7 +223,12 @@ public class MainActivity extends AppCompatActivity {
         int radioId = rg.getCheckedRadioButtonId();
         rb = findViewById(radioId);
         String p = rb.getText().toString();
-        changescreen.putExtra("callAc",q+" "+p);
+        if(we.equals("added")) {
+            changescreen.putExtra("callAc", "1"+q + "@" + p + "%" + ab + "#" + cd + "$" + pq);
+        }
+        else{
+            changescreen.putExtra("callAc", "2"+q + " " + p);
+        }
 
         startActivity(changescreen);
     }
@@ -212,7 +253,53 @@ public class MainActivity extends AppCompatActivity {
 
         String sentback = data.getStringExtra("Course Details");
 
-        
+        String x = sentback;
+
+        String a="",b="",c="",d="",f="";
+        int e=0;
+
+        for(int i=0;i<x.length();i++)
+        {
+            if(x.charAt(i)=='@'||x.charAt(i)=='%'||x.charAt(i)=='#'||x.charAt(i)=='$')
+            {
+                e++;
+            }
+
+
+            if(e==0)
+            {
+
+                a = a +  x.charAt(i);
+            }
+            else if(e==1)
+            {
+
+                if(x.charAt(i)!='@')
+                b = b +  x.charAt(i);
+            }
+            else if(e==2)
+            {
+                if(x.charAt(i)!='%')
+                c = c +  x.charAt(i);
+            }
+            else if(e==3)
+            {
+                if(x.charAt(i)!='#')
+                d = d +  x.charAt(i);
+            }
+            else if(e==4)
+            {
+                if(x.charAt(i)!='$')
+                f = f +  x.charAt(i);
+            }
+
+        }
+
+        we = a;
+        ab = b;
+        cd  = c;
+        pq = d;
+        zz = f;
 
 
     }

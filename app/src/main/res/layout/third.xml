@@ -33,22 +33,24 @@
         android:hint="Professor"
         />
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/yar3"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
+        android:completionThreshold="1"
         android:layout_below="@id/yar2"
         android:layout_marginTop="20dp"
-        android:hint="Grading Type"
+        android:hint="Grading Type(Good,Bad)"
         />
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/yar4"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/yar3"
         android:layout_marginTop="20dp"
-        android:hint="Work Load"
+        android:completionThreshold="1"
+        android:hint="Work Load(chill/Fighter)"
         />
 
     <EditText

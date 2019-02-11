@@ -18,7 +18,11 @@ public class SecondScreen extends Activity {
         int c=0;
         String h ="",w="";
         String prevac = activitythat.getExtras().getString("callAc");
-        for(int i=0;i<prevac.length();i++)
+
+        if(prevac.charAt(0)=='2'){
+
+
+        for(int i=1;i<prevac.length();i++)
         {
 
             if(prevac.charAt(i)==' ')
@@ -92,33 +96,119 @@ public class SecondScreen extends Activity {
             }
 
         }
-        else{
+        else {
 
             a.setText("WorkLoad : chill");
-            if(h.equals("HUL212-Micro"))
-            {
+            if (h.equals("HUL212-Micro")) {
                 String s = "Saptarshi Mukherjee";
                 y.setText(s);
                 b.setText("Prof Grading: Good");
-            }
-            else if(h.equals("HUL213-Macro"))
-            {
+            } else if (h.equals("HUL213-Macro")) {
                 String s = "V.Upadhyay";
                 y.setText(s);
                 b.setText("Prof Grading: Good");
-            }
-            else if(h.equals("HUL232-Modern_Fiction"))
-            {
+            } else if (h.equals("HUL232-Modern_Fiction")) {
                 String s = "Simona Sawhney";
                 y.setText(s);
                 b.setText("Prof Grading: Good");
-            }
-            else if(h.equals("HUL239-Indian_Fiction"))
-            {
+            } else if (h.equals("HUL239-Indian_Fiction")) {
                 String s = "Angelia Multani";
                 y.setText(s);
                 b.setText("Prof Grading: Good");
             }
+
+        }
+
+
+        }
+        else{
+
+            String x = prevac;
+            String a="",b="",cc="",d="",f="";
+            int e=0;
+
+            for(int i=1;i<x.length();i++)
+            {
+                if(x.charAt(i)=='@'||x.charAt(i)=='%'||x.charAt(i)=='#'||x.charAt(i)=='$')
+                {
+                    e++;
+                }
+
+
+                if(e==0)
+                {
+
+                    a = a +  x.charAt(i);
+                }
+                else if(e==1)
+                {
+
+                    if(x.charAt(i)!='@')
+                        b = b +  x.charAt(i);
+                }
+                else if(e==2)
+                {
+                    if(x.charAt(i)!='%')
+                        cc = cc +  x.charAt(i);
+                }
+                else if(e==3)
+                {
+                    if(x.charAt(i)!='#')
+                        d = d +  x.charAt(i);
+                }
+                else if(e==4)
+                {
+                    if(x.charAt(i)!='$')
+                        f = f +  x.charAt(i);
+                }
+
+            }
+
+            TextView xx = findViewById(R.id.ter);
+            TextView yy = findViewById(R.id.ter6);
+            yy.setText(a+ "."+b+"."+cc+"."+d+"."+f);
+            xx.setText(a);
+
+            if(b.equals("Based on Professor Grading"))
+            {
+                TextView y = findViewById(R.id.ter2);
+
+                if(d.equals("Bad"))
+                {
+                    y.setText("Such a Course Does Not Exist");
+                }
+                else{
+
+                    TextView aa = findViewById(R.id.ter4);
+                    TextView bb = findViewById(R.id.ter5);
+                    y.setText("Course Teacher :"+cc);
+
+                    aa.setText("Work Load: "+f);
+                    bb.setText("Prof Grading :"+d);
+                }
+            }
+            else{
+                TextView y = findViewById(R.id.ter2);
+                if(f.equals("chill"))
+                {
+                    TextView aa = findViewById(R.id.ter4);
+                    TextView bb = findViewById(R.id.ter5);
+                    y.setText("Course Teacher :"+cc);
+
+                    aa.setText("Work Load: "+f);
+                    bb.setText("Prof Grading :"+d);
+                }
+                else{
+                    y.setText("Such a Course Does Not Exist");
+                }
+
+            }
+
+
+
+
+
+
 
         }
 
