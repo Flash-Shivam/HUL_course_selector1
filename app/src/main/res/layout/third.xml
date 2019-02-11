@@ -51,32 +51,25 @@
         android:hint="Work Load"
         />
 
-    <Button
+    <EditText
+        android:id="@+id/yar5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Register"
-        android:text="Submit"
-        android:layout_marginTop="20dp"
         android:layout_below="@id/yar4"
+        android:layout_marginTop="20dp"
+        android:hint="Your CG while taking the course"
         />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/View"
-        android:text="View"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/Register"
-        />
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/View2"
-        android:text="View2"
+        android:text="Submit"
         android:onClick="Cha"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/View"
+        android:layout_below="@id/yar5"
         />
 
 

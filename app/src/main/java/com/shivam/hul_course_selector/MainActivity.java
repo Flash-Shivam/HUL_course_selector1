@@ -2,6 +2,7 @@ package com.shivam.hul_course_selector;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -196,8 +197,19 @@ public class MainActivity extends AppCompatActivity {
 
         chanescreen.putExtra("callAct","j");
 
+        final int result = 1;
 
+        startActivityForResult(chanescreen,result);
+    }
 
-        startActivity(chanescreen);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        String sentback = data.getStringExtra("Course Details");
+
+        TextView f = (TextView) findViewById(R.id.xd);
+
+        f.setText(sentback);
     }
 }
