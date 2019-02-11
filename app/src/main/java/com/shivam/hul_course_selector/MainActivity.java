@@ -19,12 +19,13 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.lang.Float;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String[] Course = new String[]{
-            "HUL212-Micro","HUL213-Macro","HUL232-Modern_Fiction","HUL239-Indian_Fiction",
-    };
+    ArrayList<String> Course = new ArrayList<String>();
+         //   "HUL212-Micro","HUL213-Macro","HUL232-Modern_Fiction","HUL239-Indian_Fiction",
+
 
     RadioGroup rg ;
     RadioButton rb ;
@@ -36,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
          rg  =  findViewById(R.id.Radio_group);
 
-
+        Course.add("HUL212-Micro");
+        Course.add("HUL213-Macro");
+        Course.add("HUL232-Modern_Fiction");
+        Course.add("HUL239-Indian_Fiction");
 
         Button z = findViewById(R.id.gn);
 
@@ -208,8 +212,8 @@ public class MainActivity extends AppCompatActivity {
 
         String sentback = data.getStringExtra("Course Details");
 
-        TextView f = (TextView) findViewById(R.id.xd);
+        
 
-        f.setText(sentback);
+
     }
 }
